@@ -1,0 +1,12 @@
+{
+  "name": "OliTechs PMS + POS",
+  "short_name": "OliTechs",
+  "description": "Hotel Property Management System and Point of Sale",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E2A3A",
+  "theme_color": "#0E2A3A",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

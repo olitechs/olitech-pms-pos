@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 4% 97%;
+    --foreground: 210 29% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 29% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 29% 4%;
+    --primary: 50 100% 50%;
+    --primary-foreground: 210 29% 4%;
+    --secondary: 48 100% 41%;
+    --secondary-foreground: 210 29% 4%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 210 7% 47%;
+    --accent: 50 100% 50%;
+    --accent-foreground: 210 29% 4%;
+    --destructive: 0 65% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 50 100% 50%;
+    --chart-1: 50 100% 50%;
+    --chart-2: 48 100% 41%;
+    --chart-3: 210 7% 47%;
+    --chart-4: 212 29% 16%;
+    --chart-5: 0 65% 52%;
+    --radius: 0.5rem;
+    --font-heading: ui-sans-serif, system-ui, sans-serif;
+    --font-body: ui-sans-serif, system-ui, sans-serif;
+    --font-display: ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --sidebar-background: 210 29% 4%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 50 100% 50%;
+    --sidebar-primary-foreground: 210 29% 4%;
+    --sidebar-accent: 212 13% 16%;
+    --sidebar-accent-foreground: 50 100% 50%;
+    --sidebar-border: 212 13% 16%;
+    --sidebar-ring: 50 100% 50%;
+    --bg-app: #F8F8F7;
+    --bg-sidebar: #090C11;
+    --bg-sidebar-hover: #262B32;
+    --bg-topnav: #202020;
+    --bg-card: #FFFFFF;
+    --bg-card-secondary: #F2F2F2;
+    --color-primary: #FFD300;
+    --color-secondary: #FFD100;
+    --color-background: #F8F8F7;
+    --color-surface: #FFFFFF;
+    --color-border: #E5E5E5;
+    --color-border-strong: #757B81;
+    --color-text-primary: #090C11;
+    --color-text-secondary: #757B81;
+  }
+
+  * { @apply border-border outline-ring/50; }
+
+  html, body, #root { min-height: 100%; }
+  body { @apply bg-background text-foreground font-body; background-color: #F8F8F7; }
+  button, a, input, select, textarea { transition: all 200ms ease; }
+}
+
+@layer components {
+  .app-shell { background: #F8F8F7; }
+  .app-shell > aside { width: 64px !important; min-width: 64px !important; max-width: 64px !important; background: #090C11 !important; }
+  .app-shell > aside button:hover { background: #262B32; }
+  .app-shell input:focus, .app-shell select:focus, .app-shell textarea:focus {
+    border-color: #FFD300 !important;
+    box-shadow: 0 0 0 1px #FFD300;
+    outline: none;
+  }
+  .global-card { @apply bg-white border border-[#E5E5E5] shadow-sm; }
+  .global-primary-button { @apply bg-[#090C11] text-white hover:bg-[#262B32] transition-all duration-200; }
+  .global-secondary-button { @apply bg-transparent border border-[#FFD300] text-[#090C11] hover:bg-[#FFEE32] hover:text-[#090C11] transition-all duration-200; }
+  .btn-yellow { background: #FFD300; color: #090C11 !important; font-weight: 600; }
+  .btn-dark { background: #090C11; color: #FFFFFF !important; }
+  .btn-charcoal { background: #262B32; color: #FFFFFF !important; }
+  .btn-yellow:hover { background: #FFD100; color: #090C11 !important; }
+  .btn-dark:hover { background: #262B32; color: #FFFFFF !important; }
+  .btn-charcoal:hover { background: #333533; color: #FFFFFF !important; }
+}
+
+@media print {
+  .app-shell { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* V7 Yellow/Black contrast safeguards */
+.btn-yellow { background: #FFD300; color: #090C11 !important; font-weight: 600; }
+.btn-dark { background: #090C11; color: #FFFFFF !important; }
+.btn-charcoal { background: #262B32; color: #FFFFFF !important; }
